@@ -1,0 +1,93 @@
+textarea {
+  border: none;
+  outline: none;
+  resize: none; /* Prevent resizing */
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  /* Add any other specific styling as needed */
+}
+textarea::placeholder {
+  display: flex;
+  justify-content: start;
+}
+
+/* @media (max-width: 768px) {
+  .bg-blue-700 {
+    display: none;
+  }
+
+  .w {
+    width: 100%;
+  }
+} */
+
+
+body{
+  font-family: 'Arial', Helvetica, sans-serif;
+}
+
+/* Add these styles to your existing CSS */
+
+#chat {
+  max-height: 400px; /* Adjust the value as needed */
+  overflow-y: auto;
+  display: flex; /* or display: inline-flex; */
+  flex-direction: column; /* or row, depending on your layout */
+  padding:40px;
+}
+
+
+/* Add these styles to your existing CSS */
+
+.message {
+  word-wrap: break-word;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.user {
+  background-color: #007bff;
+  color: #fff;
+  align-self: flex-end;
+  display: inline-block; /* Make the message width dynamic based on content */
+  max-width: 500px; /* Set a maximum width to prevent excessively long lines */
+  word-wrap: break-word; /* Wrap long words if they exceed the width */
+  margin: 5px; /* Add margin for better spacing between messages */
+  padding: 8px; /* Add padding for a visually appealing message */
+  border-radius: 5px; /* Add border-radius for rounded corners */
+  
+  
+}
+
+
+.bot {
+  background-color: #f0f0f0;
+  color: #000;
+  align-self: flex-start;
+  max-width:500px;
+  word-wrap: break-word;
+  
+  
+}
+
+/* Style the scrollbar */
+#chat::-webkit-scrollbar {
+  width: 5px; /* Adjust the width as needed */
+  
+}
+
+#chat::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the thumb */
+  border-radius: 5px; /* Rounded corners of the thumb */
+}
+
+#chat::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color of the track */
+}
+
+
+/* Optional: Adjust other styles as needed */
