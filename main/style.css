@@ -7,40 +7,26 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  /* Add any other specific styling as needed */
 }
 textarea::placeholder {
   display: flex;
   justify-content: start;
 }
 
-/* @media (max-width: 768px) {
-  .bg-blue-700 {
-    display: none;
-  }
-
-  .w {
-    width: 100%;
-  }
-} */
-
 
 body{
   font-family: 'Arial', Helvetica, sans-serif;
 }
 
-/* Add these styles to your existing CSS */
 
 #chat {
-  max-height: 400px; /* Adjust the value as needed */
+  max-height: 400px; 
   overflow-y: auto;
   display: flex; /* or display: inline-flex; */
   flex-direction: column; /* or row, depending on your layout */
   padding:40px;
 }
 
-
-/* Add these styles to your existing CSS */
 
 .message {
   word-wrap: break-word;
@@ -54,11 +40,11 @@ body{
   color: #fff;
   align-self: flex-end;
   display: inline-block; /* Make the message width dynamic based on content */
-  max-width: 500px; /* Set a maximum width to prevent excessively long lines */
+  max-width: 500px; /*  maximum width to prevent excessively long lines */
   word-wrap: break-word; /* Wrap long words if they exceed the width */
-  margin: 5px; /* Add margin for better spacing between messages */
-  padding: 8px; /* Add padding for a visually appealing message */
-  border-radius: 5px; /* Add border-radius for rounded corners */
+  margin: 5px; /*  margin for better spacing between messages */
+  padding: 8px; /*  padding for a visually appealing message */
+  border-radius: 5px; /*  border-radius for rounded corners */
   
   
 }
@@ -74,9 +60,9 @@ body{
   
 }
 
-/* Style the scrollbar */
+/* the scrollbar */
 #chat::-webkit-scrollbar {
-  width: 5px; /* Adjust the width as needed */
+  width: 5px; 
   
 }
 
@@ -89,5 +75,36 @@ body{
   background-color: #f1f1f1; /* Color of the track */
 }
 
+.message {
+  margin-bottom: 10px;
+  position: relative;
+}
 
-/* Optional: Adjust other styles as needed */
+.message img {
+  position: absolute;
+  bottom: 100%;
+}
+
+.message.user img {
+  right: 0%;
+}
+
+.message.bot img {
+  left: 0%;  
+}
+
+.message-content {
+  padding: 8px;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.message.bot .message-content {
+  background-color: #dbeafe;
+}
+
+.message.user .message-content {
+  background-color: #d1fae5;
+}
+
